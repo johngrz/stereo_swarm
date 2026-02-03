@@ -10,19 +10,19 @@
 <body>
   <div class="centered_container">
     <div>
-      <img src="img/arcticcircleurl.png" alt="audio swarm qr code">
+      <img src="img/stereosuiteurl.png" alt="audio swarm qr code">
     </div><br>
     <div>
         <img id="trigger" src="img/icons/play-button.png" alt="PLAY" width="150" />
     </div>
      <div class="audio_group">     
       <audio id="recording" controls="true">
-        <source src="audio/01John_Grzinich-AudioSwarm-ArcticCircle.mp3" type="audio/mpeg">
+        <source src="audio/stereo_swarm-A.mp3" type="audio/mpeg">
       </audio> 
        <div class="names"> 
         <i>AudioSwarm<br>
-          Arctic Circle:<br>
-        Glaciers to Seas</i>
+          S T E R E O :<br>
+        suite</i>
       </div>
     </div>  
   </div>
@@ -33,12 +33,12 @@
   </footer>
   <script type="text/javascript">
     const audioOptions = [
-      new Audio("audio/01John_Grzinich-AudioSwarm-ArcticCircle.mp3"),
-      new Audio("audio/02John_Grzinich-AudioSwarm-ArcticCircle.mp3"),
-      new Audio("audio/03John_Grzinich-AudioSwarm-ArcticCircle.mp3")
+      new Audio("audio/stereo_swarm-A.mp3"),
+      new Audio("audio/stereo_swarm-B.mp3"),
+      )
     ]
 
-    const audioIndex = Math.floor(Math.random() * 3)
+    const audioIndex = Math.floor(Math.random() * 2)
     const audio = audioOptions[audioIndex]
 
     console.log('selected option ' + audioIndex)
