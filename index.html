@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AudioSwarm by John Grzinich</title>
+</head>
+<link rel="stylesheet" href="./audioswarm.css" />
+
+<body>
+  <div class="centered_container">
+    <div>
+      <img src="img/arcticcircleurl.png" alt="audio swarm qr code">
+    </div><br>
+    <div>
+        <img id="trigger" src="img/icons/play-button.png" alt="PLAY" width="150" />
+    </div>
+     <div class="audio_group">     
+      <audio id="recording" controls="true">
+        <source src="audio/01John_Grzinich-AudioSwarm-ArcticCircle.mp3" type="audio/mpeg">
+      </audio> 
+       <div class="names"> 
+        <i>AudioSwarm<br>
+          Arctic Circle:<br>
+        Glaciers to Seas</i>
+      </div>
+    </div>  
+  </div>
+  <footer>
+    <div class="attribution">
+      <a href="https://linktr.ee/jgrzinich" title="composed by john grzinich">composed by john grzinich</a>
+      </div>
+  </footer>
+  <script type="text/javascript">
+    const audioOptions = [
+      new Audio("audio/01John_Grzinich-AudioSwarm-ArcticCircle.mp3"),
+      new Audio("audio/02John_Grzinich-AudioSwarm-ArcticCircle.mp3"),
+      new Audio("audio/03John_Grzinich-AudioSwarm-ArcticCircle.mp3")
+    ]
+
+    const audioIndex = Math.floor(Math.random() * 3)
+    const audio = audioOptions[audioIndex]
+
+    console.log('selected option ' + audioIndex)
+
+    const trigger = document.querySelectorAll("#trigger")
+    let playing = false
+    trigger.forEach(button => {
+      button.addEventListener("click", () => {
+        if (playing) {
+          audio.pause()
+          button.src="img/icons/play-button.png"
+        } else {
+          audio.play()
+          button.src="img/icons/pause.png"
+        }
+        playing = !playing
+      })
+    })
+  </script>
+</body
+</html>
